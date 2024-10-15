@@ -23,9 +23,9 @@
   --shape-base: #000F1F;
   --shape-bg: #00050A;
 
-  --text-title: #F8FBFB;
-  --text-body: #E2E7E9;
-  --text-label: #BAC6C9;
+  --color-title: #F8FBFB;
+  --color-body: #E2E7E9;
+  --color-label: #BAC6C9;
 
   --font-family: "Raleway", open-sans;
 
@@ -46,14 +46,22 @@ html{
   font-family: var(--font-family);
 }
 
+body{
+  background-color: var(--shape-bg);
+}
 
 a{
-  color: inherit;
+  color: var(--color-body);
   text-decoration: none;
 }
 
-.content{
-  max-width: 23.438rem;
+.desktop-only{
+  display: none;
+}
+
+h1{
+  font-size: var(--title-lg);
+  color: var(--color-title);
 }
 
 @media (width >= 90em){
@@ -67,7 +75,12 @@ a{
     --subtitle: 2rem;
   }
 
-  .content{
-    max-width: 90rem;
+  .mobile-only{
+    display: none;
   }
+  
+  .desktop-only{
+    display: initial;
+  }
+
 }
