@@ -4,7 +4,7 @@
   height: 15.688rem;
 
   padding-block: 1.75rem;
-  margin: 0 auto 10rem;
+  margin: 0 auto 4rem;
   text-align: center;
 
   position: relative;
@@ -46,7 +46,7 @@
     max-width: 75rem;
     height: 25rem;
     padding-top: 1.75rem;
-    margin-top: 6rem;
+    margin-block: 6rem 10rem;
 
     p{
       font: 700 var(--subtitle)/4rem var(--font-family);
