@@ -1,0 +1,136 @@
+.description{
+  max-width: 20.938rem;
+  width: 100%;
+  height: 15.688rem;
+
+  padding-block: 1.75rem;
+  margin: 0 auto 10rem;
+  text-align: center;
+
+  position: relative;
+
+  p{
+    font: 500 var(--subtitle)/1.4 var(--font-family);
+    color: var(--color-body);
+    margin-top: 1.5rem;
+  }
+
+  img{
+    content: "";
+    width: 2.5rem;
+    position: absolute;
+    
+  }
+
+  img[src*="spellbook"]{
+    top: 0;
+    right: 20%;
+    transform: rotate(13deg);
+
+  }
+
+  img[src*="planchette"]{
+    left: 4%;
+    top: 50%;
+    transform: rotate(-40deg);
+  }
+
+  img[src*="ball"]{
+    transform: rotate(20deg);
+    right: 2%;
+  }
+}
+
+@media (width >= 90em){
+  .description{
+    max-width: 75rem;
+    height: 25rem;
+    padding-top: 1.75rem;
+    margin-top: 6rem;
+
+    p{
+      font: 700 var(--subtitle)/4rem var(--font-family);
+      margin: 4rem auto 0;
+      max-width: 72rem;
+
+      strong{
+        color: var(--blue-base);
+      }
+      
+      span:nth-child(1){
+        /* animation: appear-text linear backwards;
+        animation-timeline: view();
+        animation-range: 200px 100px; */
+      }
+
+      span:nth-child(2){
+        /* animation: appear-text 2s 2s linear backwards;
+        animation-timeline: view();
+        animation-range: 200px 200px; */
+      }
+
+      span:nth-child(3){
+        /* animation: appear-text 2s 4s linear backwards;
+        animation-timeline: view();
+        animation-range: 200px 300px;
+        anima */
+      } 
+    }
+
+    img{
+      width: 5.5rem;
+    }
+
+    img[src*="spellbook"]{
+      top: 0;
+      right: 46%;
+      transition: transform 800ms;
+      
+      &:hover{
+        transform: rotate(22deg) scale(1.1);
+      }
+    }
+  
+    img[src*="planchette"]{
+      left: 2%;
+      top: 57%;
+      transform: rotate(100deg);
+      transition: transform 800ms;
+
+      &:hover{
+        transform: rotate(115deg) scale(1.1);
+      }
+    }
+  
+    img[src*="ball"]{
+      right: 0%;
+      top: 59%;
+      transform: rotate(-20deg);
+      transition: transform 800ms;
+
+      &:hover{
+        transform: rotate(-10deg) scale(1.1);
+      }
+    }
+  }
+
+  @keyframes appear-text{
+    0%{
+      opacity: .1;
+    }
+
+    100%{
+      opacity: 1;
+    }
+  }
+
+  @keyframes appear-img{
+    0%{
+      opacity: 0;
+    }
+
+    100%{
+      opacity: 1;
+    }
+  }
+}
