@@ -65,6 +65,11 @@ h1{
   color: var(--color-title);
 }
 
+h2{
+  font-size: var(--title-sm);
+  color: var(--color-title);
+}
+
 @media (width >= 90em){
   :root{
     --title-lg: 3rem;

@@ -1,0 +1,250 @@
+.book-kit{
+  max-width: 20.938rem;
+  width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+
+  .title{
+    text-align: center;
+    color: var(--color-body);
+    margin-inline: auto;
+    margin-bottom: 4rem;
+
+    div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .5rem;
+
+      img{
+        width: 1.25rem;
+        color: #9547A5;
+      }
+    }
+  }
+
+  .book{
+    display: block;
+    max-width: 21.776rem;
+    height: 19.75rem;
+    margin-inline: auto;
+    width: 100%;
+
+    /* border: 1px solid white; */
+
+    
+    & .content{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    
+    span{
+      color: var(--color-body);
+      font-size: var(--body-md2);
+      font-weight: 400;
+      position: absolute;
+    }
+
+    & img{
+      position: absolute;
+      width: 100%;
+    }
+
+    & img[src*="bookprincipal"]{
+      width: 9.824rem;
+      height: 12.98rem;
+      top: 16%;
+      left: 23%;
+      z-index: 1;
+    }
+
+    & img[src*="bookmark-yellow"]{
+      width: 3.65rem;
+      height: 11.307rem;
+      right: 18%;
+      bottom: 36%;
+      rotate: 11.717deg;
+    }
+
+    & img[src*="bookmark-purple"]{
+      width: 3.65rem;
+      height: 11.307rem;
+      z-index: -1;
+      right: 9%;
+      bottom: 20%;
+      rotate: 22deg;
+
+    }
+
+    & img[src*="pin"]{
+      width: 4.625rem;
+      left: 9%;
+      bottom: 9%;
+      z-index: 1;
+      rotate: -10deg;
+    }
+
+    & img[src*="arrow-1"]{
+      width: 3.671rem;
+      top: 14%;
+      left: 9%;
+    }
+
+    & img[src*="arrow-2"]{
+      width: 2.206rem;
+      height: 2.672rem;
+      bottom: 31%;
+      left: 5.5%;
+    }
+
+    & img[src*="arrow-3"]{
+      width: 3.06rem;
+      height: 3.187rem;
+      bottom: 6%;
+      right: 13%;
+    }
+
+    & .texto1{
+      left: 0;
+      top: 7%;
+    }
+
+    & .texto2{
+      left: 1%;
+      bottom: 48%;
+    }
+
+    & .texto3{
+      right: 9%;
+      bottom: 0;
+    }
+  }
+}
+
+@media (width >= 90em){
+  .book-kit{
+    max-width: 75rem;
+
+    .title{
+      max-width: 26.563rem;
+      margin-bottom: 5.5rem;
+    } 
+
+    .book{
+      max-width: 64.016rem;
+      height: 52.438rem;
+
+      span{
+        font-size: var(--body-md);
+      }
+
+      & img[src*="bookprincipal"]{
+        width: 29.188rem;
+        height: 38.563rem;
+        top: 16%;
+        left: 23%;
+        z-index: 1;
+      }
+  
+      & img[src*="bookmark-yellow"]{
+        width: 10.75rem;
+        height: 33.5rem;
+        right: 20%;
+        bottom: 30%;
+
+        transform: translate(-50%, 30%) rotate(-10deg);
+
+        animation: slideOut 1s ease both;
+
+      }
+      
+      & img[src*="bookmark-purple"]{
+        width: 10.75rem;
+        height: 33.5rem;
+        z-index: -1;
+        right: 11%;
+        bottom: 13%;
+
+
+        transform: translate(-120%, 16%) rotate(-22deg);
+        
+        animation: slideOut 1s 100ms ease forwards;
+      }
+  
+      & img[src*="pin"]{
+        width: 13.875rem;
+        left: 10%;
+        bottom: 0%;
+        z-index: 1;
+
+        transform: translate(80%, -25%) rotate(10deg);
+        animation: slideOut 1s ease forwards;
+      }
+  
+      & img[src*="arrow-1"]{
+        width: 10rem;
+        top: 14%;
+        left: 11%;
+
+        /* transform: translate(160%, 400%);
+        animation: slideOut 1s ease forwards;  */
+      }
+  
+      & img[src*="arrow-2"]{
+        width: 10rem;
+        height: 7rem;
+        bottom: 24%;
+        left: 3%;
+
+        transform: translate(140%, -60%) rotate(10deg);
+        animation: slideOut 1s ease forwards;
+      }
+  
+      & img[src*="arrow-3"]{
+        width: 5rem;
+        height: 7rem;
+        right: 18%;
+        bottom: 3%;
+
+        transform: translate(-180%, -90%) rotate(-22deg);
+        
+        animation: slideOut 1s 100ms ease forwards;
+      }
+  
+      & .texto1{
+        left: 4%;
+        top: 9%;
+        /* transform: translate(160%, 400%);
+        animation: slideOut 1s ease forwards;  */
+      }
+  
+      & .texto2{
+        left: 4%;
+        bottom: 39%;
+        transform: translate(200%, -200%);
+        animation: slideOut 1s ease forwards; 
+      }
+  
+      & .texto3{
+        right: 16%;
+        bottom: 1%;
+
+        transform: translate(-100%, -610%);
+        
+        animation: slideOut 1s 100ms ease forwards;
+      }
+
+      & img[src*="arrow-1"], .texto1{
+        transform: translate(160%, 400%);
+        animation: slideOut 1s ease forwards; 
+      }
+    }
+  }
+
+  @keyframes slideOut{
+    to{
+      transform: translate(0) rotate(0deg);
+    }
+  }
+}
