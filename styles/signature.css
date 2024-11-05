@@ -1,0 +1,230 @@
+.signature{
+  max-width: 23.438rem;
+  width: 100%;
+  margin-inline: auto;
+  padding: 6.5rem 1.625rem 6.5rem 1.625rem;
+
+  h2{
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .bunny, .star1, .star2, .star3, .star4{
+    display: none;
+  }
+
+  & .pricing .content-price{
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    margin-inline: auto;
+
+
+    & .mensal, .anual, .semestral{
+      width: 100%;
+
+      background-color: var(--shape-base);
+      border: 1px solid var(--shape-stroke);
+      border-radius: 1.5rem;
+      width: 17rem;
+      height: 25rem;
+      padding: 1.7rem 1.6rem;
+      
+      h3{
+        color: var(--blue-light);
+        margin-bottom: 1.5rem;
+      }
+
+      book-pricing{
+        font-size: 2.5rem;
+        color: var(--color-title);
+        font-weight: 700;
+        white-space: nowrap;
+        margin-bottom: .5rem;
+
+        & small{
+          font-size: 1rem;
+        }
+      }
+
+      span{
+        font-size: var(--body-sm);
+        color: var(--color-label);
+      }
+      
+      ul{
+        display: grid;
+        gap: .75rem;
+        margin-block: 5.188rem 2rem;  
+        color: var(--color-body);
+        font-size: var(--body-sx);
+
+        img{
+          margin-right: .5rem;
+        }
+
+        li{
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+        }
+      }
+
+      a{
+        white-space: nowrap;
+        width: 100%;
+        background-color: var(--blue-dark);
+        margin-inline: auto;
+        padding: .75rem 3.34rem;
+        border-radius: .5rem;
+      }
+    }
+
+    & .semestral{
+      .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+
+        span{
+          background-color: var(--shape-stroke);
+          border-radius: 62.4375rem;
+          margin-bottom: 0;
+          padding: .56rem 1.25rem;
+          font-size: .625rem;
+          color: var(--color-body);
+        } 
+      }
+
+      h3{
+        color: var(--pink-light);
+        margin-bottom: 0;
+      }
+
+      ul{
+        margin-block: 3.6rem 2rem;  
+      }
+
+      a{
+        background-color: var(--pink-dark);
+      }
+    }
+
+    & .anual{
+      ul{
+        margin-block: 2.3rem 2rem;  
+      }
+    }
+  }
+}
+
+@media (width >= 90em){
+  .signature{
+    max-width: 90rem;
+    background: url(./../assets/pricing-background.png) no-repeat;
+    background-size: contain;
+
+    h2{
+      margin-bottom: 3.5rem;
+    }
+
+    .bunny, .star1, .star2, .star3, .star4{
+      display: initial;
+      position: absolute;
+    }
+
+    .bunny{
+      width: 2.81591rem;
+      height: 3.1204rem;
+      top: 1%;
+      left: 41%;
+    }
+
+    .star1{
+      width: 1.625rem;
+      height: 1.625rem;
+      left: 6%;
+      top: 18%;
+    }
+
+    .star2{
+      width: 0.81594rem;
+      height: 0.81594rem;
+      left: 5%;
+      top: 25%;
+    }
+
+    .star3{
+      width: 1.45138rem;
+      height: 1.45138rem;
+      right: 10%;
+      bottom: 10%;
+      transform: rotate(-10deg);
+    }
+
+    .star4{
+      width: 0.70313rem;
+      height: 0.70313rem;
+      right: 15%;
+      bottom: 6%;
+    } 
+
+    .pricing{
+      width: 65.625rem;
+      height: 37.875rem;
+      margin: 0 auto 11rem;
+      
+      & .content-price{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        overflow-x: hidden;
+
+        .mensal, .anual, .semestral{
+          position: absolute;
+          transition: 600ms;
+
+          &:hover{
+            background-color: var(--shape-hover);
+            scale: 1.1;
+            z-index: 1;
+          }
+        
+        }
+
+        & .mensal{
+          top: 19%;
+          left: 11%;
+          transform: rotate(-10deg);
+
+          a:hover{
+            background-color: var(--blue-mid);
+          }
+        }
+
+        & .semestral{
+          top: 9%;
+
+          a:hover{
+            background-color: var(--pink-base);
+          }
+        }
+
+        & .anual{
+          top: 19%;
+          right: 11%;
+          transform: rotate(10deg);
+
+          a:hover{
+            background-color: var(--blue-mid);
+          }
+        }
+      }
+    }
+
+    
+  }
+}

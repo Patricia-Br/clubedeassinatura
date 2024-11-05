@@ -3,6 +3,7 @@
   width: 100%;
   margin-inline: auto;
   overflow: hidden;
+  padding-bottom: 6.71rem;
 
   .title{
     text-align: center;
@@ -125,6 +126,8 @@
 @media (width >= 90em){
   .book-kit{
     max-width: 75rem;
+    padding-bottom: 19.56rem;
+
 
     .title{
       max-width: 26.563rem;
