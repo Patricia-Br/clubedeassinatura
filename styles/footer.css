@@ -78,6 +78,14 @@ footer{
 
     & .about{
       gap: 3.5rem;
+
+      & a{
+        transition: 300ms;
+      }
+
+      & a:hover{
+        color: var(--blue-light);
+      }
     }
   }
 }
