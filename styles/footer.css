@@ -1,7 +1,6 @@
 footer{
   width: 100%;
-  /* height: 25.9375rem; */
-  max-width: 20rem;
+  max-width: 23.4375rem;
   padding: 6.12rem 2rem 2.38rem;
   margin-inline: auto;
   background: url(./../assets/book-trace-bg-mobile.png) no-repeat;
@@ -30,7 +29,7 @@ footer{
   & .about{
     display: flex;
     padding-top: 2.5rem;
-    gap: 1.5rem;
+    gap: 2rem;
 
     & .links{
       display: grid;
